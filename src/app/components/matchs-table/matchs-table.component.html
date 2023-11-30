@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Score One</th>
+        <th scope="col">Score Two</th>
+        <th scope="col">Team One</th>
+        <th scope="col">Team Two</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of matches">
+        <td scope="col">{{m.id}}</td>
+        <td scope="col">{{m.scoreOne}}</td>
+        <td scope="col">{{m.scoreTwo}}</td>
+        <td scope="col">{{m.teamOne}}</td>
+        <td scope="col">{{m.teamTwo}}</td>
+        <td scope="col">
+            <button class="btn btn-success" (click)="goTo(m.id)"> Display</button>
+            <button class="btn btn-danger">Deploy</button>
+        </td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
